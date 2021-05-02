@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Big Caslon";
+  src: url(../fonts/big-caslon-medium.ttf);
+}
+
+@font-face {
+  font-family: "Source Code Pro Light";
+  src: url(../fonts/source-code-pro-light.ttf);
+}
+
+@font-face {
+  font-family: "Source Code Pro Medium";
+  src: url(../fonts/source-code-pro-medium.ttf);
+}
+
+@font-face {
+  font-family: "Source Code Pro Bold";
+  src: url(../fonts/source-code-pro-bold.ttf);
+}
+
+:root {
+  --colorPrimary: #221c35;
+  --colorSecundary: #ef6a00;
+  --colorTertiary: #007672;
+  --white: #ffffff;
+  --gray: #f2f2f2;
+  --black: #0d0d0d;
+  --textFontLight: "Source Code Pro Light", monospace;
+  --textFontMedium: "Source Code Pro Medium", monospace;
+  --textFontBold: "Source Code Pro Bold", monospace;
+  --titleFont: "Big Caslon", serif;
+  --size10: 0.625rem;
+  --size18: 1.125rem;
+  --size36: 2.25rem;
+  --size72: 4.5rem;
+  --btnPadding: 15px 20px;
+  --btnRadius: 10px;
+}
+
+body {
+  background: var(--gray);
+  font-size: 1rem;
+}
+
+.call-to-action {
+  background: var(--colorSecundary) !important;
+}
