@@ -100,35 +100,35 @@ const arrows = document.querySelectorAll(".arrow-mobile");
 questions[0].addEventListener("click", showAnswerMobileOne);
 function showAnswerMobileOne() {
   answersMobile[0].classList.toggle("active-mobile");
-  arrows[0].textContent = "▲";
+  arrows[0].textContent = "▼";
   if (answersMobile[0].classList.contains("active-mobile")) {
-    arrows[0].textContent = "▼";
+    arrows[0].textContent = "▲";
   }
 }
 
 questions[1].addEventListener("click", showAnswerMobileTwo);
 function showAnswerMobileTwo() {
   answersMobile[1].classList.toggle("active-mobile");
-  arrows[1].textContent = "▲";
+  arrows[1].textContent = "▼";
   if (answersMobile[1].classList.contains("active-mobile")) {
-    arrows[1].textContent = "▼";
+    arrows[1].textContent = "▲";
   }
 }
 
 questions[2].addEventListener("click", showAnswerMobileThree);
 function showAnswerMobileThree() {
   answersMobile[2].classList.toggle("active-mobile");
-  arrows[2].textContent = "▲";
+  arrows[2].textContent = "▼";
   if (answersMobile[2].classList.contains("active-mobile")) {
-    arrows[2].textContent = "▼";
+    arrows[2].textContent = "▲";
   }
 }
 
 questions[3].addEventListener("click", showAnswerMobileFour);
 function showAnswerMobileFour() {
   answersMobile[3].classList.toggle("active-mobile");
-  arrows[3].textContent = "▲";
+  arrows[3].textContent = "▼";
   if (answersMobile[3].classList.contains("active-mobile")) {
-    arrows[3].textContent = "▼";
+    arrows[3].textContent = "▲";
   }
 }
