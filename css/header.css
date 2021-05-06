@@ -13,8 +13,6 @@
 
 .head h1 {
   position: absolute;
-  font-size: var(--size72);
-  font-family: var(--titleFont);
   margin-left: 182px;
   margin-top: 250px;
   max-width: 600px;

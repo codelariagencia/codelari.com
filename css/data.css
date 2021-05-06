@@ -1,0 +1,44 @@
+.data {
+  color: var(--colorPrimary);
+}
+
+.data .container {
+  margin: 120px auto;
+}
+
+.data-left h2 {
+  max-width: 300px;
+}
+
+.data-left img {
+  margin-top: 40px;
+  margin-left: -182px;
+  left: 600px;
+}
+
+.data-right {
+  margin-left: 170px;
+}
+
+.data-right p {
+  margin-bottom: 40px;
+}
+
+.data-right p:last-child {
+  margin-bottom: 0px;
+}
+
+.data-right p:first-child,
+.data-numbers {
+  font-size: var(--size36);
+}
+
+.data-numbers {
+  display: block;
+}
+
+.data-numbers,
+.data-percent {
+  color: var(--colorSecundary);
+  font-family: var(--textFontBold);
+}
