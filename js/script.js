@@ -140,17 +140,16 @@ function showAnswerMobileFour() {
 const numbers = document.querySelectorAll("[data-numbers]");
 
 numbers.forEach(function (item) {
-  const textOriginal = item.textContent;
-  const numbersClean = +textOriginal.split(".").join().split(",").join("");
-  const increment = Math.floor(numbersClean / 100);
+  const numbersClean = +item.textContent;
+  const increment = Math.floor(numbersClean / 20);
 
   let start = 0;
   const timer = setInterval(function () {
     start = start + increment;
     item.textContent = start;
     if (start > numbersClean) {
-      item.textContent = textOriginal;
+      item.textContent = numbersClean;
       clearInterval(timer);
     }
-  }, 25 * Math.random());
+  }, 100 * Math.random());
 });
