@@ -1,3 +1,5 @@
+// FAQ
+
 const questions = document.querySelectorAll('[data-faq="questions"] li');
 const answers = document.querySelectorAll('[data-faq="answers"]');
 const line = document.querySelectorAll('[data-faq="line"]');
@@ -92,7 +94,7 @@ function showAnswerFour() {
   icon[3].classList.add("question-active");
 }
 
-// Mobile
+// FAQ Mobile
 
 const answersMobile = document.querySelectorAll(".answers-mobile");
 const arrows = document.querySelectorAll(".arrow-mobile");
@@ -132,3 +134,23 @@ function showAnswerMobileFour() {
     arrows[3].textContent = "▲";
   }
 }
+
+// Data
+
+const numbers = document.querySelectorAll("[data-numbers]");
+
+numbers.forEach(function (item) {
+  const textOriginal = item.textContent;
+  const numbersClean = +textOriginal.split(".").join().split(",").join("");
+  const increment = Math.floor(numbersClean / 100);
+
+  let start = 0;
+  const timer = setInterval(function () {
+    start = start + increment;
+    item.textContent = start;
+    if (start > numbersClean) {
+      item.textContent = textOriginal;
+      clearInterval(timer);
+    }
+  }, 25 * Math.random());
+});
