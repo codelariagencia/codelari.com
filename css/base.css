@@ -44,10 +44,6 @@ body {
   font-family: var(--textFontMedium);
 }
 
-.call-to-action {
-  background: var(--colorSecundary) !important;
-}
-
 .container {
   max-width: 1077px;
   margin: 0 auto;
@@ -76,4 +72,43 @@ legend {
 .link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  color: var(--gray);
+  font-family: var(--textFontBold);
+  font-size: var(--size18);
+  text-transform: uppercase;
+  padding: var(--btnPadding);
+  background: var(--colorTertiary);
+  border-radius: var(--btnRadius);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid var(--colorTertiary);
+  border-radius: 15px;
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.call-to-action {
+  background: var(--colorSecundary) !important;
+}
+
+.call-to-action::before {
+  border: 2px solid var(--colorSecundary) !important;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  top: calc(2px * -3);
+  left: calc(2px * -3);
+  right: calc(2px * -3);
+  bottom: calc(2px * -3);
 }

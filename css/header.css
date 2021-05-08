@@ -38,16 +38,6 @@
   margin-left: 20px;
 }
 
-.header nav ul li a {
-  color: var(--gray);
-  font-family: var(--textFontBold);
-  font-size: var(--size18);
-  text-transform: uppercase;
-  padding: var(--btnPadding);
-  background: var(--colorTertiary);
-  border-radius: var(--btnRadius);
-}
-
 .logo {
   padding: 20px;
 }
