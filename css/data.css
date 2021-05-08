@@ -11,9 +11,25 @@
 }
 
 .data-left img {
+  opacity: 0;
   margin-top: 40px;
   margin-left: -182px;
   left: 600px;
+}
+
+.show-img {
+  animation: showImg 0.5s forwards !important;
+}
+
+@keyframes showImg {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 .data-right {
@@ -41,4 +57,23 @@
 .data-percent {
   color: var(--colorSecundary);
   font-family: var(--textFontBold);
+}
+
+.data-right p {
+  opacity: 0;
+}
+
+.active-scroll {
+  animation: showData 0.5s forwards !important;
+}
+
+@keyframes showData {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0);
+  }
 }
