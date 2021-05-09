@@ -278,3 +278,88 @@ function animaScrollImg() {
 }
 
 window.addEventListener("scroll", animaScrollImg);
+
+// Service
+
+const benefits = document.querySelectorAll(".plan ul li");
+const tooltips = document.querySelectorAll(".tooltip");
+
+benefits[0].addEventListener("mouseover", showTooltipOne);
+function showTooltipOne() {
+  tooltips[0].classList.add("active-tooltip");
+}
+
+benefits[0].addEventListener("mouseout", hiddenTooltipOne);
+function hiddenTooltipOne() {
+  tooltips[0].classList.remove("active-tooltip");
+}
+
+benefits[1].addEventListener("mouseover", showTooltipTwo);
+function showTooltipTwo() {
+  tooltips[1].classList.add("active-tooltip");
+}
+
+benefits[1].addEventListener("mouseout", hiddenTooltipTwo);
+function hiddenTooltipTwo() {
+  tooltips[1].classList.remove("active-tooltip");
+}
+
+benefits[2].addEventListener("mouseover", showTooltipThree);
+function showTooltipThree() {
+  tooltips[2].classList.add("active-tooltip");
+}
+
+benefits[2].addEventListener("mouseout", hiddenTooltipThree);
+function hiddenTooltipThree() {
+  tooltips[2].classList.remove("active-tooltip");
+}
+
+benefits[3].addEventListener("mouseover", showTooltipFour);
+function showTooltipFour() {
+  tooltips[3].classList.add("active-tooltip");
+}
+
+benefits[3].addEventListener("mouseout", hiddenTooltipFour);
+function hiddenTooltipFour() {
+  tooltips[3].classList.remove("active-tooltip");
+}
+
+benefits[4].addEventListener("mouseover", showTooltipFive);
+function showTooltipFive() {
+  tooltips[4].classList.add("active-tooltip");
+}
+
+benefits[4].addEventListener("mouseout", hiddenTooltipFive);
+function hiddenTooltipFive() {
+  tooltips[4].classList.remove("active-tooltip");
+}
+
+benefits[5].addEventListener("mouseover", showTooltipSix);
+function showTooltipSix() {
+  tooltips[5].classList.add("active-tooltip");
+}
+
+benefits[5].addEventListener("mouseout", hiddenTooltipSix);
+function hiddenTooltipSix() {
+  tooltips[5].classList.remove("active-tooltip");
+}
+
+benefits[6].addEventListener("mouseover", showTooltipSeven);
+function showTooltipSeven() {
+  tooltips[6].classList.add("active-tooltip");
+}
+
+benefits[6].addEventListener("mouseout", hiddenTooltipSeven);
+function hiddenTooltipSeven() {
+  tooltips[6].classList.remove("active-tooltip");
+}
+
+benefits[7].addEventListener("mouseover", showTooltipEight);
+function showTooltipEight() {
+  tooltips[7].classList.add("active-tooltip");
+}
+
+benefits[7].addEventListener("mouseout", hiddenTooltipEight);
+function hiddenTooltipEight() {
+  tooltips[7].classList.remove("active-tooltip");
+}

@@ -72,7 +72,7 @@
   .header nav ul {
     flex-wrap: wrap;
   }
-  .call-to-action {
+  .header .call-to-action {
     position: relative;
     top: 55px;
     right: 20px;
@@ -83,7 +83,7 @@
 }
 
 @media (max-width: 261px) {
-  .call-to-action {
+  .header .call-to-action {
     top: 37px;
     display: block;
     text-align: center;

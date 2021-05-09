@@ -1,6 +1,7 @@
 .service > p {
   text-align: center;
   color: var(--colorPrimary);
+  margin: 0 20px;
 }
 
 .service > p:nth-child(2) {
@@ -78,4 +79,122 @@
   max-width: 200px;
   margin-bottom: 0px;
   margin-right: 40px;
+}
+
+.plan ul {
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  left: -27px;
+  background: #1e192d;
+  z-index: 200;
+  padding: 20px;
+  border: 2px solid var(--colorSecundary);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  animation: showTooltip 0.2s forwards;
+}
+
+@keyframes showTooltip {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -5px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.tooltip-one {
+  top: 34px;
+}
+
+.tooltip-two {
+  top: 92px;
+}
+
+.tooltip-three {
+  top: 150px;
+}
+
+.tooltip-four {
+  top: 208px;
+}
+
+.tooltip-five {
+  top: 266px;
+}
+
+.tooltip-six {
+  top: 324px;
+}
+
+.tooltip-seven {
+  top: 382px;
+}
+
+.tooltip-eight {
+  top: 440px;
+}
+
+.tooltip::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #1e192d;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  border-top: 2px solid var(--colorSecundary);
+  border-left: 2px solid var(--colorSecundary);
+  border-radius: 1px 0 0 0;
+  top: -12px;
+  left: 20px;
+}
+
+.active-tooltip {
+  display: block;
+}
+
+.show {
+  display: none;
+}
+
+@media (max-width: 605px) {
+  .tooltip {
+    display: none !important;
+  }
+}
+
+@media (max-width: 451px) {
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+  .call {
+    flex-direction: column;
+  }
+  .call p {
+    max-width: 100%;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 304px) {
+  .plan {
+    padding: 20px;
+  }
+  .service > p:nth-child(2) {
+    margin: 20px 20px 0px 20px;
+  }
+  .plan h3 {
+    font-size: 2rem;
+  }
 }
