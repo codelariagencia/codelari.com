@@ -363,3 +363,20 @@ benefits[7].addEventListener("mouseout", hiddenTooltipEight);
 function hiddenTooltipEight() {
   tooltips[7].classList.remove("active-tooltip");
 }
+
+// Contact
+
+const contact = document.querySelector(".contact");
+const toTopContact = window.innerHeight * 0.6;
+const animateLion = document.querySelectorAll("[data-lion]");
+
+function animaScrollLion() {
+  const viewTop = contact.getBoundingClientRect().top - toTopContact;
+  if (viewTop < 0) {
+    animateLion.forEach(function (item) {
+      item.classList.add("animate-lion");
+    });
+  }
+}
+
+window.addEventListener("scroll", animaScrollLion);

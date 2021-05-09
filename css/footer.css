@@ -1,0 +1,19 @@
+.footer {
+  background: #1e192d;
+  padding: 60px 0px;
+  text-align: center;
+}
+
+.copy {
+  font-family: var(--textFontLight);
+  color: var(--gray);
+  font-size: var(--size10);
+  margin: 10px auto;
+  max-width: 200px;
+}
+
+.tagline {
+  font-family: var(--titleFont);
+  font-size: var(--size18);
+  color: var(--gray);
+}

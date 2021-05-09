@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: start;
   margin-top: 120px;
-  height: 762px;
+  height: 100%;
   background: url(../img/bg-service.jpg) no-repeat center center;
   background-size: cover;
 }
