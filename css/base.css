@@ -83,6 +83,7 @@ legend {
   padding: var(--btnPadding);
   background: var(--colorTertiary);
   border-radius: var(--btnRadius);
+  text-align: center;
 }
 
 .btn::before {

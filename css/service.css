@@ -1,0 +1,81 @@
+.service > p {
+  text-align: center;
+  color: var(--colorPrimary);
+}
+
+.service > p:nth-child(2) {
+  font-family: var(--titleFont);
+  font-size: var(--size36);
+  max-width: 300px;
+  margin: 20px auto 0px auto;
+}
+
+.service-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 120px;
+  height: 762px;
+  background: url(../img/bg-service.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.plan {
+  position: relative;
+  bottom: 80px;
+  width: 463px;
+  background: var(--colorPrimary);
+  margin: 0px 20px;
+  color: var(--gray);
+  padding: 40px;
+  border: 4px solid var(--colorSecundary);
+  border-radius: 40px;
+  box-shadow: 0px 8px 20px rgba(34, 28, 53, 0.3);
+}
+
+.plan h3 {
+  font-family: var(--textFontBold);
+  font-size: var(--size36);
+  color: var(--colorSecundary);
+  margin-bottom: 30px;
+}
+
+.plan p {
+  margin-bottom: 40px;
+}
+
+.plan ul li {
+  margin-top: 20px;
+}
+
+.plan ul li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  margin-right: 10px;
+  height: 7px;
+  border: solid 2px var(--colorTertiary);
+  border-radius: 100%;
+  position: relative;
+}
+
+.plan ul li::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--black);
+  margin-top: 20px;
+}
+
+.call {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.call p {
+  max-width: 200px;
+  margin-bottom: 0px;
+  margin-right: 40px;
+}
