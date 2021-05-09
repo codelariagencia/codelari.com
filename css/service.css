@@ -1,7 +1,12 @@
 .service > p {
   text-align: center;
   color: var(--colorPrimary);
-  margin: 0 20px;
+  padding: 0px 20px;
+}
+
+.service > p:nth-child(1) {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .service > p:nth-child(2) {
@@ -190,9 +195,6 @@
 @media (max-width: 304px) {
   .plan {
     padding: 20px;
-  }
-  .service > p:nth-child(2) {
-    margin: 20px 20px 0px 20px;
   }
   .plan h3 {
     font-size: 2rem;

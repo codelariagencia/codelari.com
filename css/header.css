@@ -17,6 +17,18 @@
   margin-top: 250px;
   max-width: 600px;
   color: var(--gray);
+  animation: showTitle 1.2s forwards;
+}
+
+@keyframes showTitle {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 .header {
