@@ -1,0 +1,37 @@
+.stages {
+  background: var(--colorPrimary);
+  color: var(--gray);
+  padding: 120px 0px;
+}
+
+.stages h2 {
+  margin-bottom: 90px;
+}
+
+.stage {
+  background: rgba(13, 13, 13, 0.2);
+}
+
+.stage .container {
+  padding: 20px 0px;
+  margin-bottom: 90px;
+  align-items: center;
+}
+
+.stage:last-child .container {
+  margin-bottom: 0px;
+}
+
+.stage .container > h3 {
+  font-size: 18rem;
+  color: rgba(239, 106, 0, 0.2);
+  font-family: var(--textFontBold);
+  margin-right: 20px;
+}
+
+.stage .container div h3 {
+  font-family: var(--textFontBold);
+  font-size: var(--size36);
+  color: var(--colorSecundary);
+  margin-bottom: 20px;
+}
