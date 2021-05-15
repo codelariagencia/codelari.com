@@ -1,0 +1,107 @@
+.purchase {
+  background: var(--colorSecundary);
+  padding: 120px 0px;
+  color: var(--colorPrimary);
+}
+
+.purchase-left form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-left > p {
+  max-width: 600px;
+}
+
+.field,
+.field-text {
+  font-family: var(--textFontMedium);
+  font-size: var(--size18);
+  color: var(--colorPrimary);
+  background: #f08530;
+  border: 4px solid var(--colorPrimary);
+  margin-bottom: 40px;
+  height: 20px;
+  padding: 20px;
+  border-radius: var(--btnRadius);
+}
+
+.field-text {
+  height: 100px;
+  resize: vertical;
+}
+
+.field:focus,
+.field-text:focus,
+.field:hover,
+.field-text:hover {
+  outline: none;
+  background: var(--colorSecundary);
+}
+
+.label {
+  font-family: var(--textFontBold);
+  font-size: var(--size18);
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  color: var(--colorSecundary);
+  font-size: var(--size36);
+  height: 90px;
+  background: var(--colorPrimary);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-submit:hover {
+  color: var(--colorPrimary);
+  background: var(--colorSecundary);
+  border: 8px solid var(--colorPrimary);
+}
+
+.purchase-right {
+  margin-left: 90px;
+}
+
+.purchase-right > p {
+  font-family: var(--titleFont);
+  font-size: var(--size36);
+}
+
+.price-tag span {
+  position: relative;
+  right: -20px;
+  bottom: -10px;
+  color: var(--colorSecundary);
+  background: var(--colorPrimary);
+  font-family: var(--textFontBold);
+  padding: 2px 5px;
+  border-radius: 25px;
+}
+
+.price-tag p {
+  display: table;
+  padding: 20px;
+  font-family: var(--textFontBold);
+  font-size: var(--size36);
+  color: var(--colorSecundary);
+  background: var(--colorPrimary);
+  border-radius: 25px;
+}
+
+.price {
+  margin: 20px 0px 40px 0px;
+}
+
+.price > p {
+  font-family: var(--textFontBold);
+  margin-left: 20px;
+}
+
+.purchase-right p:nth-child(6),
+.purchase-right p:nth-child(5) {
+  font-family: var(--textFontMedium);
+  font-size: var(--size18);
+}
