@@ -33,6 +33,7 @@
 
 .header {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   position: absolute;
   width: 100%;
@@ -103,4 +104,52 @@
   .head h1 {
     font-size: 3.5rem;
   }
+}
+
+/* E-commerce */
+
+.landing h1 {
+  max-width: 900px;
+  margin-top: 200px;
+}
+
+.bg-word {
+  position: absolute;
+  width: 623px;
+  height: 80px;
+  margin-left: -10px;
+  z-index: -1;
+  background: var(--colorSecundary);
+}
+
+.slide-title {
+  display: none;
+}
+
+.active-word {
+  display: block;
+  animation: changeWord 0.7s forwards;
+}
+
+@keyframes changeWord {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+.hidden-word {
+  display: none;
+}
+
+.change-words {
+  display: none;
+}
+
+.show-word {
+  display: inline-block;
 }
