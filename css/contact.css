@@ -73,3 +73,35 @@
     display: none;
   }
 }
+
+/* Landing Page */
+
+.contact-landing {
+  background: var(--colorPrimary);
+  padding: 120px 0px;
+  color: var(--gray);
+}
+
+.contact-landing .container {
+  flex-direction: column;
+}
+
+.contact-landing .container ul {
+  margin: 0 auto;
+  display: flex;
+}
+
+.contact-landing .container p {
+  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.contact-landing .container ul li {
+  margin-right: 40px;
+}
+
+.contact-landing .container ul li:last-child {
+  margin-right: 0px;
+}
