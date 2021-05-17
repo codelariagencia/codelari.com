@@ -176,7 +176,7 @@
 
 @media (max-width: 775px) {
   .expand-bg {
-    height: 150px;
+    height: 145px;
   }
 }
 
@@ -194,7 +194,7 @@
 
 @media (max-width: 633px) {
   .expand-bg {
-    height: 150px;
+    height: 145px;
   }
 }
 
@@ -212,7 +212,7 @@
 
 @media (max-width: 568px) {
   .expand-bg {
-    height: 138px;
+    height: 131px;
   }
 }
 
@@ -225,7 +225,7 @@
     height: 63px;
   }
   .expand-bg {
-    height: 120px;
+    height: 114px;
   }
 }
 
@@ -244,7 +244,7 @@
     height: 54px;
   }
   .expand-bg {
-    height: 100px;
+    height: 97px;
   }
 }
 
@@ -257,18 +257,18 @@
     height: 50px;
   }
   .expand-bg {
-    height: 90px;
+    height: 87px;
   }
 }
 
 @media (max-width: 270px) {
   .expand-bg-word2 {
-    height: 90px;
+    height: 87px;
   }
 }
 
 @media (max-width: 244px) {
   .bg-word {
-    height: 90px;
+    height: 87px;
   }
 }
