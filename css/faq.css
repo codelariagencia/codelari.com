@@ -215,14 +215,12 @@
 }
 
 @media (max-width: 741px) {
-  .line {
+  .line,
+  .answers {
     display: none;
   }
   .faq .container {
     flex-direction: column;
-  }
-  .answers {
-    display: none;
   }
   .questions {
     width: 100%;

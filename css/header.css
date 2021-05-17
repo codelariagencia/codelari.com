@@ -130,21 +130,15 @@
   background: var(--colorSecundary);
 }
 
-.slide-title {
+.slide-title,
+.hidden-word,
+.change-words {
   display: none;
 }
 
 .active-word {
   display: block;
   animation: translateLeft30 0.7s forwards;
-}
-
-.hidden-word {
-  display: none;
-}
-
-.change-words {
-  display: none;
 }
 
 .show-word {

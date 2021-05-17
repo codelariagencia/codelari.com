@@ -19,11 +19,8 @@
   text-align: center;
 }
 
+.media ul li,
 .media p {
-  margin-bottom: 55px;
-}
-
-.media ul li {
   margin-bottom: 55px;
 }
 
