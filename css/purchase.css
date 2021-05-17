@@ -19,7 +19,7 @@
   font-family: var(--textFontMedium);
   font-size: var(--size18);
   color: var(--colorPrimary);
-  background: #f08530;
+  background: rgba(242, 242, 242, 0.2);
   border: 4px solid var(--colorPrimary);
   margin-bottom: 40px;
   height: 20px;
@@ -37,7 +37,7 @@
 .field:hover,
 .field-text:hover {
   outline: none;
-  background: var(--colorSecundary);
+  background: rgba(242, 242, 242, 0.3);
 }
 
 .label {
