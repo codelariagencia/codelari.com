@@ -39,18 +39,7 @@
 }
 
 .animate-lion {
-  animation: showLion 1s forwards !important;
-}
-
-@keyframes showLion {
-  0% {
-    opacity: 0;
-    transform: translate3d(0px, -30px, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
+  animation: translate30 1s forwards !important;
 }
 
 @media (max-width: 1077px) {

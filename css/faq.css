@@ -21,6 +21,11 @@
   background: rgba(13, 13, 13, 0.2);
   padding: 20px;
   z-index: 201;
+  margin-top: 40px;
+}
+
+.questions li:first-child {
+  margin-top: 0px;
 }
 
 .questions li:hover {
@@ -30,14 +35,6 @@
 .questions li:hover .icon {
   border: solid 2px var(--colorSecundary);
   transition: 0.1s;
-}
-
-.questions li {
-  margin-top: 40px;
-}
-
-.questions li:first-child {
-  margin-top: 0px;
 }
 
 .icon {
@@ -74,26 +71,13 @@
   }
 }
 
-.arrow-mobile {
+.arrow-mobile,
+.arrow-rotate {
   display: none;
   animation: animateArrowMobile 0.5s ease-in 0s infinite alternate !important;
 }
 
 @keyframes animateArrowMobile {
-  0% {
-    transform: translate3d(0px, -5px, 0px);
-  }
-  100% {
-    transform: translate3d(0px, 0px, 0px);
-  }
-}
-
-.arrow-rotate {
-  display: none;
-  animation: animateArrowRotate 0.5s ease-in 0s infinite alternate !important;
-}
-
-@keyframes animateArrowRotate {
   0% {
     transform: translate3d(0px, -5px, 0px);
   }
@@ -110,18 +94,7 @@
   width: 400px;
   background: var(--colorPrimaryBold);
   padding: 20px;
-  animation: showAnswer 1s forwards;
-}
-
-@keyframes showAnswer {
-  0% {
-    opacity: 0;
-    transform: translate3d(0px, -10px, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
+  animation: translate10 1s forwards;
 }
 
 .answers-mobile {
@@ -257,10 +230,8 @@
   .arrow-desktop {
     display: none;
   }
-  .arrow-mobile {
-    display: block;
-  }
+  .arrow-mobile,
   .active-mobile {
-    display: block !important;
+    display: block;
   }
 }
