@@ -40,7 +40,7 @@ setInterval(() => {
   }
 }, 2000);
 
-// Scroll
+// Animations
 
 const stages = document.querySelectorAll(".stage");
 const price = document.querySelector(".purchase-right");
@@ -61,3 +61,16 @@ function showItensLanding() {
 }
 
 window.addEventListener("scroll", showItensLanding);
+
+const btnCta = document.querySelector(".call-to-action");
+const purchase = document.querySelector("#purchase");
+
+function showPurchase(event) {
+  event.preventDefault();
+  purchase.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+btnCta.addEventListener("click", showPurchase);
