@@ -9,7 +9,23 @@
 }
 
 .stage {
+  opacity: 0;
   background: rgba(13, 13, 13, 0.2);
+}
+
+.active-stage {
+  animation: showStage 0.5s forwards !important;
+}
+
+@keyframes showStage {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -30px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 .stage .container {

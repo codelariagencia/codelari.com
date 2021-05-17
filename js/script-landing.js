@@ -39,3 +39,25 @@ setInterval(() => {
     bgWord.classList.remove("expand-bg-word2");
   }
 }, 2000);
+
+// Scroll
+
+const stages = document.querySelectorAll(".stage");
+const price = document.querySelector(".purchase-right");
+const toTop = window.innerHeight * 0.9;
+const toTopPrice = window.innerHeight * 0.7;
+
+function showItensLanding() {
+  stages.forEach(function (item) {
+    const viewTop = item.getBoundingClientRect().top - toTop;
+    if (viewTop < 0) {
+      item.classList.add("active-stage");
+    }
+    const viewTopPrice = price.getBoundingClientRect().top - toTopPrice;
+    if (viewTopPrice < 0) {
+      price.classList.add("active-price");
+    }
+  });
+}
+
+window.addEventListener("scroll", showItensLanding);
