@@ -1,6 +1,7 @@
 let words = document.querySelectorAll(".slide-title");
 let titleLanding = document.querySelectorAll(".original-words");
 let titleLandingChanged = document.querySelectorAll(".change-words");
+let bgWord = document.querySelector(".bg-word");
 let currentWord = 0;
 let max = words.length;
 
@@ -25,5 +26,16 @@ setInterval(() => {
     titleLandingChanged.forEach(function (item) {
       item.classList.remove("show-word");
     });
+  }
+  if (words[0].classList.contains("active-word")) {
+    bgWord.classList.add("expand-bg");
+  } else {
+    bgWord.classList.remove("expand-bg");
+  }
+
+  if (words[1].classList.contains("active-word")) {
+    bgWord.classList.add("expand-bg-word2");
+  } else {
+    bgWord.classList.remove("expand-bg-word2");
   }
 }, 2000);

@@ -35,3 +35,33 @@
   color: var(--colorSecundary);
   margin-bottom: 20px;
 }
+
+.stage .container div p {
+  margin-right: 20px;
+}
+
+@media (max-width: 530px) {
+  .stages h2 {
+    font-size: var(--size36);
+  }
+  .stage .container div h3 {
+    font-size: var(--size18);
+  }
+}
+
+@media (max-width: 420px) {
+  .stage .container {
+    flex-direction: column;
+    padding: 0 20px 20px 20px;
+  }
+  .stage .container div p {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 280px) {
+  .stages h2 {
+    width: 100%;
+    word-wrap: break-word;
+  }
+}

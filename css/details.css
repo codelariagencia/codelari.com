@@ -49,3 +49,15 @@
 .details-content li:nth-child(6) {
   align-self: flex-end;
 }
+
+@media (max-width: 710px) {
+  .details-content {
+    display: block;
+  }
+  .details-content li {
+    width: calc(100% - 40px);
+  }
+  .details-content li p {
+    max-width: 100%;
+  }
+}

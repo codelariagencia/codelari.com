@@ -105,3 +105,17 @@
 .contact-landing .container ul li:last-child {
   margin-right: 0px;
 }
+
+@media (max-width: 502px) {
+  .contact-landing .container ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-landing .container ul li {
+    margin-right: 0px;
+    margin-bottom: 55px;
+  }
+  .contact-landing .container ul li:last-child {
+    margin-bottom: 0px;
+  }
+}
