@@ -108,7 +108,7 @@
   position: relative;
   top: 48px;
   width: 400px;
-  background: rgba(13, 13, 13, 0.2);
+  background: var(--colorPrimaryBold);
   padding: 20px;
   animation: showAnswer 1s forwards;
 }
@@ -127,7 +127,7 @@
 .answers-mobile {
   display: none;
   margin-top: 10px;
-  background: rgba(13, 13, 13, 0.2);
+  background: var(--colorPrimaryBold);
   padding: 20px;
   margin-bottom: 40px;
   animation: showAnswer 1s forwards;

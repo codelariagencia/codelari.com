@@ -94,7 +94,7 @@
   display: none;
   position: absolute;
   left: -27px;
-  background: #1e192d;
+  background: var(--colorPrimaryBold);
   z-index: 200;
   padding: 20px;
   border: 2px solid var(--colorSecundary);
@@ -150,7 +150,7 @@
   content: "";
   width: 20px;
   height: 20px;
-  background: #1e192d;
+  background: var(--colorPrimaryBold);
   display: block;
   position: absolute;
   transform: rotate(45deg);

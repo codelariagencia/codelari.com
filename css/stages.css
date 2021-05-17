@@ -10,7 +10,7 @@
 
 .stage {
   opacity: 0;
-  background: rgba(13, 13, 13, 0.2);
+  background: var(--colorPrimaryBold);
 }
 
 .active-stage {
@@ -29,7 +29,7 @@
 }
 
 .stage .container {
-  padding: 20px 0px;
+  padding: 20px;
   margin-bottom: 90px;
   align-items: center;
 }
@@ -40,7 +40,7 @@
 
 .stage .container > h3 {
   font-size: 18rem;
-  color: rgba(239, 106, 0, 0.2);
+  color: var(--colorSecundaryBold);
   font-family: var(--textFontBold);
   margin-right: 20px;
 }
@@ -50,10 +50,6 @@
   font-size: var(--size36);
   color: var(--colorSecundary);
   margin-bottom: 20px;
-}
-
-.stage .container div p {
-  margin-right: 20px;
 }
 
 @media (max-width: 530px) {
@@ -68,10 +64,6 @@
 @media (max-width: 420px) {
   .stage .container {
     flex-direction: column;
-    padding: 0 20px 20px 20px;
-  }
-  .stage .container div p {
-    margin-right: 0px;
   }
 }
 

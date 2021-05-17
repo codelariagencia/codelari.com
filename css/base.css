@@ -20,7 +20,11 @@
 
 :root {
   --colorPrimary: #221c35;
+  --colorPrimaryBold: #1e192d;
   --colorSecundary: #ef6a00;
+  --colorSecundaryBold: #482924;
+  --colorSecundaryLight: #f08530;
+  --colorSecundaryHover: #f09349;
   --colorTertiary: #007672;
   --white: #ffffff;
   --gray: #f2f2f2;
