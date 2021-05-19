@@ -62,11 +62,11 @@ function animaNumber(numberId, dataInfo, incrementValue = 100) {
 }
 
 function animaScroll(infoId) {
-  window.addEventListener("scroll", function jamaica() {
+  window.addEventListener("scroll", function showData() {
     const viewTop = dataInfos[infoId].getBoundingClientRect().top - toTop;
     if (viewTop < 0) {
       dataInfos[infoId].classList.add("active-scroll");
-      window.removeEventListener("scroll", jamaica);
+      window.removeEventListener("scroll", showData);
       if (dataInfos[1].classList.contains("active-scroll")) {
         animaNumber(0, dataInfos[1]);
         dataInfos[1].classList.add("animated-number");
