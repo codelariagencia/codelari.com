@@ -1,3 +1,5 @@
+// Header
+
 let words = document.querySelectorAll(".slide-title");
 let titleLanding = document.querySelectorAll(".original-words");
 let titleLandingChanged = document.querySelectorAll(".change-words");
@@ -40,7 +42,7 @@ setInterval(() => {
   }
 }, 2000);
 
-// Animations
+// Stages & Purchase
 
 const stages = document.querySelectorAll(".stage");
 const price = document.querySelector(".purchase-right");
@@ -61,6 +63,8 @@ function showItensLanding() {
 }
 
 window.addEventListener("scroll", showItensLanding);
+
+// Call To Action
 
 const btnCta = document.querySelector(".call-to-action");
 const purchase = document.querySelector("#purchase");
