@@ -13,16 +13,20 @@ $email = isset($_POST['email']) ? $_POST['email'] : '';
 $number = isset($_POST['number']) ? $_POST['number'] : '';
 $message = isset($_POST['message']) ? $_POST['message'] : '';
 
+
 if ($name == '' || $email == '' || $number == '' || $message == '') {
     echo json_encode(['isSuccess' => false]);
+    exit();
 } else {
 
     try {
         sendEmailToCodelari($name, $email, $number, $message);
         sendEmailToClient($email);
         echo json_encode(['isSuccess' => true]);
+        exit();
     } catch (Exception $error) {
         echo json_encode(['isSuccess' => false, "message" => $error->getMessage()]);
+        exit();
     }
 }
 

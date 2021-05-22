@@ -7,6 +7,9 @@ let bgWord = document.querySelector(".bg-word");
 let currentWord = 0;
 let max = words.length;
 
+const form = document.querySelector(".contact-form-js");
+const formButton = form.querySelector(".submit-form-js");
+
 setInterval(() => {
   words[currentWord].classList.remove("active-word");
   currentWord++;
@@ -78,3 +81,28 @@ function showPurchase(event) {
 }
 
 btnCta.addEventListener("click", showPurchase);
+
+formButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  sendForm();
+});
+
+const sendForm = async () => {
+  const name = form.querySelector("[name=name]").value;
+  const email = form.querySelector("[name=email]").value;
+  const number = form.querySelector("[name=number]").value;
+  const message = form.querySelector("[name=message]").value;
+
+  if (name == "" || email == "" || number == "" || message == "") {
+    console.log("form invalido");
+  } else {
+    const body = new FormData(form);
+
+    const result = await fetch("contato.php", {
+      method: "POST",
+      body: body,
+    });
+
+    console.log(await result.json());
+  }
+};
