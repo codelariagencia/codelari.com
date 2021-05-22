@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-.purchase-left > p {
+.form-instruction {
   max-width: 600px;
 }
 
@@ -62,6 +62,11 @@ select:-webkit-autofill:focus {
 
 .btn-submit {
   display: block;
+  font-family: var(--textFontBold);
+  text-transform: uppercase;
+  padding: var(--btnPadding);
+  border-radius: var(--btnRadius);
+  text-align: center;
   color: var(--colorSecundary);
   font-size: var(--size18);
   height: 70px;
@@ -126,6 +131,29 @@ select:-webkit-autofill:focus {
 .price p:nth-child(4) {
   font-family: var(--textFontMedium);
   font-size: var(--size18);
+}
+
+#form-sucesso h2,
+#form-erro h2 {
+  margin-top: -40px;
+  font-family: var(--titleFont);
+  font-size: var(--size72);
+  max-width: 600px;
+}
+
+#form-sucesso p,
+#form-erro p {
+  margin-top: 20px;
+  max-width: 600px;
+  font-size: var(--size18);
+}
+
+#form-note {
+  font-size: var(--size12) !important;
+}
+
+#form-erro .link {
+  color: var(--colorPrimary);
 }
 
 @media (max-width: 765px) {

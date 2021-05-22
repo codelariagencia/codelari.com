@@ -82,27 +82,75 @@ function showPurchase(event) {
 
 btnCta.addEventListener("click", showPurchase);
 
-formButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  sendForm();
-});
+// Form
 
-const sendForm = async () => {
-  const name = form.querySelector("[name=name]").value;
-  const email = form.querySelector("[name=email]").value;
-  const number = form.querySelector("[name=number]").value;
-  const message = form.querySelector("[name=message]").value;
-
-  if (name == "" || email == "" || number == "" || message == "") {
-    console.log("form invalido");
-  } else {
-    const body = new FormData(form);
-
-    const result = await fetch("contato.php", {
-      method: "POST",
-      body: body,
-    });
-
-    console.log(await result.json());
+window.SimpleForm = class {
+  constructor(t) {
+    (this.config = t),
+      (this.form = document.querySelector(t.form)),
+      this.form &&
+        "function" == typeof window.fetch &&
+        ((this.url = this.form.getAttribute("action")),
+        (this.formButton = this.form.querySelector(t.button)),
+        this.init());
+  }
+  displayError() {
+    this.form.innerHTML = this.config.erro;
+  }
+  displaySuccess() {
+    this.form.innerHTML = this.config.sucesso;
+  }
+  getFormValues() {
+    const t = new FormData();
+    return (
+      this.form.querySelectorAll("[name]").forEach((e) => {
+        const r = e.getAttribute("name"),
+          n = e.value;
+        t.append(r, n);
+      }),
+      t
+    );
+  }
+  validateForm() {
+    const t = this.form.querySelectorAll("[required]");
+    let e = !0;
+    return (
+      t.forEach((t) => {
+        e && (e = !!t.value);
+      }),
+      e
+    );
+  }
+  onSendForm(t) {
+    t.preventDefault(),
+      (t.currentTarget.disabled = !0),
+      (t.currentTarget.innerText = "Enviando...");
+  }
+  sendForm(t) {
+    this.validateForm() &&
+      (this.onSendForm(t),
+      fetch(this.url, { method: "POST", body: this.getFormValues() })
+        .then((t) => {
+          const formInstruction = document.querySelector(".form-instruction");
+          formInstruction.style.display = "none";
+          if (!t.ok) throw Error(t.statusText);
+          return t.text();
+        })
+        .then((t) => this.displaySuccess())
+        .catch((t) => {
+          this.displayError();
+        }));
+  }
+  init() {
+    (this.sendForm = this.sendForm.bind(this)),
+      this.formButton.addEventListener("click", this.sendForm);
   }
 };
+
+new SimpleForm({
+  form: ".formphp",
+  button: "#enviar",
+  erro: "<div id='form-erro'><h2>Ops, algum erro ocorreu :(</h2><p>Mas calma, você ainda pode enviar um e-mail diretamente para <a class='link' href='mailto:contato@codelari.com'><strong>contato@codelari.com</strong></a><p id='form-note'>Não se esqueça de no assunto colocar: Contato - Codelari, e além disso, também incluir no corpo do e-mail o seu nome, algum meio de contato e o que deseja.<br><br>Não perca tempo, estamos no aguardo da sua mensagem!</p></p></div>",
+  sucesso:
+    "<div id='form-sucesso'><h2>Agradecemos a preferência :)</h2><p>Fique tranquilo(a)! Sabemos que a ansiedade é grande, mas tentaremos responder o mais rápido possível.</p></div>",
+});
