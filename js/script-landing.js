@@ -82,7 +82,38 @@ function showPurchase(event) {
 
 btnCta.addEventListener("click", showPurchase);
 
+// Mask Number
+
+const number = document.querySelector(".number");
+
+number.addEventListener("keyup", show);
+
+function show() {
+  const ddd = number.value[0] + number.value[1];
+  const firstPartCel =
+    number.value[2] +
+    number.value[3] +
+    number.value[4] +
+    number.value[5] +
+    number.value[6];
+  const secondPartCel =
+    number.value[7] + number.value[8] + number.value[9] + number.value[10];
+  const firstPartTel =
+    number.value[2] + number.value[3] + number.value[4] + number.value[5];
+  const secondPartTel =
+    number.value[6] + number.value[7] + number.value[8] + number.value[9];
+  if (number.value.length >= 11) {
+    number.value = `${ddd} ${firstPartCel} ${secondPartCel}`;
+  } else if (number.value.length >= 10) {
+    number.value = `${ddd} ${firstPartTel} ${secondPartTel}`;
+  }
+}
+
 // Form
+
+const emailForm = document.querySelector(".email");
+const nameForm = document.querySelector(".name");
+const messageForm = document.querySelector(".message");
 
 window.SimpleForm = class {
   constructor(t) {
@@ -113,7 +144,12 @@ window.SimpleForm = class {
   }
   validateForm() {
     const t = this.form.querySelectorAll("[required]");
-    let e = !0;
+    let e =
+      !0 &&
+      emailForm.checkValidity() &&
+      number.checkValidity() &&
+      nameForm.checkValidity() &&
+      messageForm.checkValidity();
     return (
       t.forEach((t) => {
         e && (e = !!t.value);
@@ -123,8 +159,14 @@ window.SimpleForm = class {
   }
   onSendForm(t) {
     t.preventDefault(),
-      (t.currentTarget.disabled = !0),
-      (t.currentTarget.innerText = "Enviando...");
+      (t.currentTarget.disabled =
+        !0 &&
+        emailForm.checkValidity() &&
+        number.checkValidity() &&
+        nameForm.checkValidity() &&
+        messageForm.checkValidity()),
+      t.currentTarget.classList.add("loading"),
+      (t.currentTarget.innerText = "Enviando");
   }
   sendForm(t) {
     this.validateForm() &&
