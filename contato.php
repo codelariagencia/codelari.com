@@ -66,14 +66,35 @@ td.mj-full-width-mobile { width: auto !important; }
 
 function sendEmailToCodelari($name, $email, $number, $message)
 {
-    $body = "nome:$name\nemail:$email\nnumber:$number\nmessage:$message";
-    sendEmail('contato@codelari.com', 'contato@codelari.com', 'Formulário de contato do site', $body);
+    $body = '<!doctype html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><title>Novo formulário de contato</title><!--[if !mso]><!-- --><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style type="text/css">#outlook a { padding:0; }
+    body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }
+    table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }
+    img { border:0;height:auto;line-height:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic; }
+    p { display:block;margin:13px 0; }</style><!--[if mso]>
+  <xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]--><!--[if lte mso 11]>
+  <style type="text/css">
+    .mj-outlook-group-fix { width:100% !important; }
+  </style>
+  <![endif]--><style type="text/css">@media only screen and (min-width:480px) {
+  .mj-column-per-100 { width:100% !important; max-width: 100%; }
+}</style><style type="text/css"></style></head><body style="background-color:#221C35;"><div style="background-color:#221C35;"><!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;"><v:image style="border:0;mso-position-horizontal:center;position:absolute;top:0;width:600px;z-index:-3;" xmlns:v="urn:schemas-microsoft-com:vml" /><![endif]--><div style="margin:0 auto;max-width:600px;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;"><tr style="vertical-align:top;"><td style="background:#221C35;background-position:center center;background-repeat:no-repeat;padding:0px;padding-top:40px;vertical-align:top;" height="-40"><!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" style="width:600px;" width="600" ><tr><td style=""><![endif]--><div class="mj-hero-content" style="margin:0px auto;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;margin:0px;"><tr><td><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;margin:0px;"></table></td></tr></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></table></div><!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style="background:#F2F2F2;background-color:#F2F2F2;margin:0px auto;border-radius:20px;max-width:600px;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#F2F2F2;background-color:#F2F2F2;width:100%;border-radius:20px;"><tbody><tr><td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;"><!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]--><div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tr><td align="center" style="background:#EF6A00;font-size:0px;padding:20px;word-break:break-word;"><div style="font-family:Arial, sans-serif;font-size:20px;font-weight:bold;line-height:1;text-align:center;color:#221C35;">Novo formulário de contato</div></td></tr><tr><td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;"><table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#221C35;font-family:Arial, sans-serif;font-size:16px;line-height:22px;table-layout:auto;width:100%;border:none;"><tr style="border-bottom:1px solid #221C35;text-align:left;"><th style="padding: 10px 0 0 0; color: #EF6A00">Campo</th><th style="padding: 10px 0 0 0; color: #EF6A00">Resposta</th></tr><tr style="border-bottom:1px solid #FFFFFF;text-align:left;"><td style="padding: 10px 0 0 0; font-weight: bold">Nome</td><td style="padding: 10px 0 0 0; max-width: 160px">' . $name . '</td></tr><tr style="border-bottom:1px solid #FFFFFF;text-align:left;"><td style="padding: 10px 0 0 0; font-weight: bold">E- mail</td><td style="padding: 10px 0 0 0; max-width: 160px">' . $email . '</td></tr><tr style="border-bottom:1px solid #FFFFFF;text-align:left;"><td style="padding: 10px 0 0 0; font-weight: bold">Telefone</td><td style="padding: 10px 0 0 0; max-width: 160px">' . $number . '</td></tr><tr style="border-bottom:1px solid #FFFFFF;text-align:left;"><td style="padding: 10px 0 0 0; font-weight: bold">Mensagem</td><td style="padding: 10px 0 0 0; max-width: 160px">' . $message . '</td></tr></table></td></tr></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style="margin:0px auto;max-width:600px;"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;"><tbody><tr><td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;"><!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]--><div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%"><tr><td style="font-size:0px;word-break:break-word;"><!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td height="4" style="height:4px;"><![endif]--><div style="height:4px;">&nbsp;</div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></div></body></html>';
+
+    sendEmail('contato@codelari.com', 'contato@codelari.com', 'Contato - Codelari', $body);
 }
 
 
 
 function sendEmail($from, $to, $subject, $body)
 {
+
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
 
     $mail = new PHPMailer(true);
 
@@ -84,7 +105,9 @@ function sendEmail($from, $to, $subject, $body)
     $mail->Password = 'Ysf3DExfBRTf3jQ#';
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
-    $mail->setFrom($from);
+    $mail->ClearReplyTos();
+    $mail->addReplyTo($email, $name);
+    $mail->setFrom($from, 'Codelari');
     $mail->addAddress($to);
     $mail->isHTML(true);
     $mail->Subject = $subject;
