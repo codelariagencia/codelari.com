@@ -82,13 +82,13 @@ function showPurchase(event) {
 
 btnCta.addEventListener("click", showPurchase);
 
-// Mask Number
+// Mask
 
 const number = document.querySelector(".number");
 
-number.addEventListener("keyup", show);
+number.addEventListener("keyup", formatNumber);
 
-function show() {
+function formatNumber() {
   const ddd = number.value[0] + number.value[1];
   const firstPartCel =
     number.value[2] +
@@ -109,10 +109,26 @@ function show() {
   }
 }
 
+const nameForm = document.querySelector(".name");
+
+function capitalize(str) {
+  var splitStr = str.toLowerCase().split(" ");
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] =
+      splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  }
+  return splitStr.join(" ");
+}
+
+nameForm.addEventListener("keyup", formatName);
+
+function formatName() {
+  nameForm.value = capitalize(nameForm.value);
+}
+
 // Form
 
 const emailForm = document.querySelector(".email");
-const nameForm = document.querySelector(".name");
 const messageForm = document.querySelector(".message");
 
 window.SimpleForm = class {
