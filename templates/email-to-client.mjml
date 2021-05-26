@@ -9,7 +9,7 @@
 		<mj-section background-color="#F2F2F2" border-radius="20px">
     	<mj-column>
       	<mj-text  font-weight="bold" padding="20px" container-background-color="#EF6A00" align="center" font-family="Arial, sans-serif" color="#221C35" font-size="20px">
-        	Olá, Geremias!
+        	Olá, Nome!
         </mj-text>
         <mj-text padding-top="20px" align="center" font-family="Arial, sans-serif" color="#221C35" font-size="16px">
         	Gostaríamos primeiramente de agradecer por ter escolhido a 							<strong>Codelari</strong>.

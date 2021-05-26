@@ -28,19 +28,19 @@
           </tr>
           <tr style="border-bottom: 1px solid #ffffff; text-align: left">
             <td style="padding: 10px 0 0 0; font-weight: bold">Nome</td>
-            <td style="padding: 10px 0 0 0; max-width: 160px">aqui</td>
+            <td style="padding: 10px 0 0 0; max-width: 160px">Resposta</td>
           </tr>
           <tr style="border-bottom: 1px solid #ffffff; text-align: left">
             <td style="padding: 10px 0 0 0; font-weight: bold">E- mail</td>
-            <td style="padding: 10px 0 0 0; max-width: 160px">aqui</td>
+            <td style="padding: 10px 0 0 0; max-width: 160px">Resposta</td>
           </tr>
           <tr style="border-bottom: 1px solid #ffffff; text-align: left">
             <td style="padding: 10px 0 0 0; font-weight: bold">Telefone</td>
-            <td style="padding: 10px 0 0 0; max-width: 160px">aqui</td>
+            <td style="padding: 10px 0 0 0; max-width: 160px">Resposta</td>
           </tr>
           <tr style="border-bottom: 1px solid #ffffff; text-align: left">
             <td style="padding: 10px 0 0 0; font-weight: bold">Mensagem</td>
-            <td style="padding: 10px 0 0 0; max-width: 160px">aqui</td>
+            <td style="padding: 10px 0 0 0; max-width: 160px">Resposta</td>
           </tr>
         </mj-table>
       </mj-column>
