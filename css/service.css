@@ -50,11 +50,11 @@
   margin-bottom: 40px;
 }
 
-.test {
+.benefit {
   margin-top: 20px;
 }
 
-.test::before {
+.benefit::before {
   content: "";
   display: inline-block;
   width: 7px;
@@ -65,7 +65,7 @@
   position: relative;
 }
 
-.test::after {
+.benefit::after {
   content: "";
   display: block;
   width: 100%;

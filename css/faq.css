@@ -14,6 +14,14 @@
   margin-right: 20px;
 }
 
+.questions ul {
+  margin-bottom: 40px;
+}
+
+.questions ul:nth-child(7) {
+  margin-bottom: 0px;
+}
+
 .questions li {
   position: relative;
   color: var(--gray);
@@ -21,11 +29,6 @@
   background: rgba(13, 13, 13, 0.2);
   padding: 20px;
   z-index: 201;
-  margin-top: 40px;
-}
-
-.questions li:first-child {
-  margin-top: 0px;
 }
 
 .questions li:hover {
@@ -99,7 +102,7 @@
 
 .answers-mobile {
   display: none;
-  margin-top: 10px;
+  margin-top: -30px;
   background: var(--colorPrimaryBold);
   padding: 20px;
   margin-bottom: 40px;
@@ -214,7 +217,7 @@
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 780px) {
   .line-second-question {
     top: 325px;
   }
