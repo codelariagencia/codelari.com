@@ -8,8 +8,8 @@ require './PHPmailer/PHPMailer.php';
 require './PHPmailer/SMTP.php';
 
 
-$GLOBALS['name'] = isset($_POST['name']) ? $_POST['name'] : '';
-$GLOBALS['email'] = isset($_POST['email']) ? $_POST['email'] : '';
+$name = isset($_POST['name']) ? $_POST['name'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
 $number = isset($_POST['number']) ? $_POST['number'] : '';
 $message = isset($_POST['message']) ? $_POST['message'] : '';
 
