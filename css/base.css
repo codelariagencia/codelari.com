@@ -47,6 +47,16 @@
   --btnRadius: 10px;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--colorTertiary);
+  color: var(--gray);
+  text-shadow: none;
+}
+
 body {
   background: var(--gray);
   font-size: 1rem;
