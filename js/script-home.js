@@ -110,7 +110,7 @@ window.addEventListener("scroll", animaScrollImg);
 
 // Service
 
-const benefits = document.querySelectorAll(".plan ul li");
+const benefits = document.querySelectorAll(".test");
 const tooltips = document.querySelectorAll(".tooltip");
 
 benefits.forEach(function (benefit) {

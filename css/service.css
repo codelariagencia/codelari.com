@@ -50,11 +50,11 @@
   margin-bottom: 40px;
 }
 
-.plan ul li {
+.test {
   margin-top: 20px;
 }
 
-.plan ul li::before {
+.test::before {
   content: "";
   display: inline-block;
   width: 7px;
@@ -65,7 +65,7 @@
   position: relative;
 }
 
-.plan ul li::after {
+.test::after {
   content: "";
   display: block;
   width: 100%;

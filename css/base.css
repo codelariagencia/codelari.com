@@ -69,7 +69,7 @@ strong {
   font-family: var(--textFontBold);
 }
 
-legend {
+.legend {
   font-size: var(--size10);
   font-family: var(--textFontLight);
 }
