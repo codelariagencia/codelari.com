@@ -109,6 +109,10 @@
   animation: showAnswer 1s forwards;
 }
 
+.answers-mobile:last-child {
+  margin-top: 10px;
+}
+
 .answers h2,
 .answers-mobile h2 {
   font-family: var(--titleFont);
