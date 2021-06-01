@@ -194,8 +194,12 @@ window.SimpleForm = class {
           if (!t.ok) throw Error(t.statusText);
           return t.text();
         })
-        .then((t) => this.displaySuccess())
+        .then((t) => {
+          console.log(t);
+          this.displaySuccess();
+        })
         .catch((t) => {
+          console.log(t);
           this.displayError();
         }));
   }
