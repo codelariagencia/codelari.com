@@ -138,9 +138,20 @@ select:-webkit-autofill:focus {
   font-size: var(--size18);
 }
 
+#form-sucesso,
+#form-erro {
+  margin-top: -40px;
+  background: var(--colorPrimary);
+  color: var(--gray);
+  padding: 20px 20px 30px 20px;
+  border: 4px solid var(--colorSecundaryLight);
+  border-radius: 20px;
+  box-shadow: 0px 8px 20px rgba(34, 28, 53, 0.3);
+}
+
 #form-sucesso h2,
 #form-erro h2 {
-  margin-top: -40px;
+  color: var(--colorSecundary);
   font-family: var(--titleFont);
   font-size: var(--size72);
   max-width: 600px;
@@ -158,7 +169,8 @@ select:-webkit-autofill:focus {
 }
 
 #form-erro .link {
-  color: var(--colorPrimary);
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .loading:after {
@@ -183,13 +195,13 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 810px) {
   .purchase-right {
     margin-left: 40px;
   }
 }
 
-@media (max-width: 678px) {
+@media (max-width: 735px) {
   .purchase .container {
     flex-direction: column;
   }

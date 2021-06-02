@@ -145,6 +145,12 @@
   display: inline-block;
 }
 
+@media (max-width: 810px) {
+  .bg-word {
+    width: 100%;
+  }
+}
+
 @media (max-width: 800px) {
   .bg-word {
     width: 100%;

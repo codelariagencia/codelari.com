@@ -212,7 +212,7 @@ window.SimpleForm = class {
 new SimpleForm({
   form: ".formphp",
   button: "#enviar",
-  erro: "<div id='form-erro'><h2>Ops, algum erro ocorreu :(</h2><p>Mas calma, você ainda pode enviar um e-mail diretamente para <a class='link' href='mailto:contato@codelari.com'><strong>contato@codelari.com</strong></a><p id='form-note'>Não se esqueça de no assunto colocar: Contato - Codelari, e além disso, também incluir no corpo do e-mail o seu nome, algum meio de contato e o que deseja.<br><br>Não perca tempo, estamos no aguardo da sua mensagem!</p></p></div>",
+  erro: "<div id='form-erro'><h2>Ops, algum erro ocorreu :(</h2><p>Mas calma, você ainda pode enviar um e-mail diretamente para <a class='link' href='mailto:contato@codelari.com'><strong>contato@codelari.com</strong></a><p id='form-note'>Não se esqueça de no assunto colocar: Contato - Codelari, e além disso, também incluir no corpo do e-mail o seu nome, algum meio de contato e o que deseja.<br><br>Não perca tempo, estamos no aguardo da sua mensagem!</div>",
   sucesso:
     "<div id='form-sucesso'><h2>Agradecemos a preferência :)</h2><p>Fique tranquilo(a)! Sabemos que a ansiedade é grande, mas tentaremos responder o mais rápido possível.</p></div>",
 });
