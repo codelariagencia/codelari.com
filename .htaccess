@@ -21,3 +21,10 @@ RewriteRule ^(.*?)/?$ $1.html [L]
 
 ErrorDocument 404 /not-found.html
 
+<Files briefing.html>
+AuthType Basic
+AuthName "Authentication Required"
+AuthUserFile /home/u354789233/domains/codelari.com/public_html/.htpasswd
+Require valid-user
+</Files>
+
