@@ -115,6 +115,7 @@
 }
 
 .field-checkbox {
+  flex: none !important;
   all: unset;
   display: block;
   height: 20px;
