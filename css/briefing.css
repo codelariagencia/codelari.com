@@ -159,7 +159,7 @@
   padding: var(--btnPadding);
   border-radius: var(--btnRadius);
   text-align: center;
-  width: calc(100% - 213px);
+  width: calc(100% - 219px);
   height: 70px;
 }
 
