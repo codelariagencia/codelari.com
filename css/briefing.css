@@ -48,7 +48,7 @@
   border: 4px solid var(--colorSecundaryLight);
   box-shadow: 0px 8px 20px rgba(34, 28, 53, 0.3);
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px;
   animation: translate30 0.7s forwards;
 }
 
@@ -115,7 +115,6 @@
 }
 
 .field-checkbox {
-  flex: none !important;
   all: unset;
   display: block;
   height: 20px;
@@ -307,7 +306,7 @@
   }
   .briefing-instructions {
     order: 1;
-    width: calc(100% - 48px);
+    width: calc(100% - 86px);
     margin-bottom: 40px;
   }
   .logo-briefing {
