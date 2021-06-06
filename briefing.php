@@ -12,7 +12,7 @@ require 'vendor/autoload.php';
 $token = "S=s562:U=d69efa8:E=1811ff3add7:C=179c8428040:P=185:A=codelari:V=2:H=ce8c67aa809b62406a1724f5f3187fe7";
 $sandbox = false;
 
-$briefingsNotebook = 'briefings';
+$briefingsNotebook = 'Briefings';
 
 $name = $_POST['name'];
 $body = $_POST['body'];

@@ -231,14 +231,13 @@
             required />
           <label class="label" for="email">E-mail</label>
           <input id="email" class="field email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            name="email" placeholder="Insira aqui o seu melhor e-mail." required />
+            name="email" placeholder="exemplo@exemplo.com" required />
           <label class="label" for="number">Telefone / Celular</label>
           <input id="number" class="field number" type="tel" onkeyup="this.value = this.value.replace(/\D/g, '');"
-            name="number" placeholder="Apenas números, sem o 0 no início do DDD." pattern=".{10,13}" required />
+            name="number" placeholder="Apenas números, sem o 0 no início do DDD" pattern=".{10,13}" required />
           <label class="label" for="message">Mensagem</label>
-          <textarea id="message" class="field-text message" minlength="70" name="message"
-            placeholder="Temos muito interesse na sua marca e no que a Codelari pode fazer por você, então quanto mais informações nos fornecer, melhor!"
-            required></textarea>
+          <textarea id="message" class="field-text message" minlength="60" name="message"
+            placeholder="Quanto mais informações nos fornecer, melhor! Mínimo de caracteres: 60" required></textarea>
           <button id="enviar" class="btn-submit submit-form-js" type="submit">
             Enviar Formulário
           </button>

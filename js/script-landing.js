@@ -151,8 +151,11 @@ window.SimpleForm = class {
     const t = new FormData();
     return (
       this.form.querySelectorAll("[name]").forEach((e) => {
-        const r = e.getAttribute("name"),
-          n = e.value;
+        const r = e.getAttribute("name");
+        let n = e.value;
+        if (e.classList.contains("field-text")) {
+          n = e.value.replace(/\r\n|\r|\n/g, "</br>");
+        }
         t.append(r, n);
       }),
       t
@@ -181,7 +184,7 @@ window.SimpleForm = class {
         number.checkValidity() &&
         nameForm.checkValidity() &&
         messageForm.checkValidity()),
-      t.currentTarget.classList.add("loading"),
+      t.currentTarget.classList.add("loading", "click-on-submit"),
       (t.currentTarget.innerText = "Enviando");
   }
   sendForm(t) {
@@ -195,11 +198,9 @@ window.SimpleForm = class {
           return t.text();
         })
         .then((t) => {
-          console.log(t);
           this.displaySuccess();
         })
         .catch((t) => {
-          console.log(t);
           this.displayError();
         }));
   }

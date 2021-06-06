@@ -1,102 +1,363 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Codelari | Desenvolvimento de e-commerce para a sua marca</title>
-    <meta name="description"
-        content="A sua marca merece o melhor, então por que não abrir um e-commerce agora mesmo e passar a ganhar dinheiro com a internet? Pois a Codelari cuida disso para você!" />
-    <meta name="keywords"
-        content="agencia de ecommerce, criar ecommerce, como fazer um ecommerce, montar um ecommerce, abrir um ecommerce, agencia de desenvolvimento web, agencia de programação, agencia de comercio eletronico, criar comercio eletronico, como fazer um comercio eletronico, montar um comercio eletronico, abrir um comercio eletronico" />
-    <meta name="author" content="Codelari" />
-    <meta name="language" content="pt-BR" />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Codelari | Desenvolvimento de e-commerce" />
-    <meta property="og:description"
-        content="A sua marca merece o melhor, então por que não abrir um e-commerce agora mesmo e passar a ganhar dinheiro com a internet? Pois a Codelari cuida disso para você!" />
-    <meta property="og:url" content="https://codelari.com/ecommerce" />
-    <meta property="og:image" content="https://codelari.com/img/og-image.jpg" />
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@codelariagencia" />
-    <meta name="twitter:title" content="Codelari | Desenvolvimento de e-commerce" />
-    <meta name="twitter:description"
-        content="A sua marca merece o melhor, então por que não abrir um e-commerce agora mesmo e passar a ganhar dinheiro com a internet? Pois a Codelari cuida disso para você!" />
-
+    <title>Codelari | Codelari</title>
+    <meta name="robots" content="noindex" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="landing">
-    <section class="head">
+<body class="briefing">
+    <header class="logo-briefing">
+        <img src="img/logo.svg" alt="">
+        <div></div>
+        <h1 class="title">Briefing</h1>
+    </header>
+    <ul class="breadcrumb">
+        <li><span class="active-breadcrumb"></span>Informações</li>
+        <li><span></span>Necessidades</li>
+        <li><span></span>Marketing</li>
+        <li><span></span>Identidade Visual</li>
+        <li><span></span>Site</li>
+    </ul>
+    <section class="container">
+        <form class="briefing-form briefing-form-js formphp">
+            <div class="steps active-step">
 
+                <label class="label" for="name">Seu nome</label>
+                <input class="field" minlength="4" name="name" placeholder="Qual o seu nome?" required></input>
 
+                <label class="label" for="email">E-mail pessoal ou corporativo</label>
+                <input class="field" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email"
+                    placeholder="exemplo@exemplo.com" required></input>
 
-        <section id="purchase" class="purchase">
-            <div class="container">
-                <div class="purchase-left">
-                    <p class="form-instruction">
-                        Caso tenha interesse, você pode preencher o formulário abaixo que
-                        entraremos em contato o mais rápido possível.
-                    </p>
+                <label class="label" for="enterprise">Empresa</label>
+                <input class="field" name="enterprise" placeholder="Nome da sua empresa/marca" required></input>
 
-                    <form class="briefing-form-js formphp">
+                <label class="label" for="category">Ramo/Setor onde atua</label>
+                <input class="field" name="category" placeholder="Moda, games, varejo de móveis, etc"></input>
 
-                        <label class="label" for="name">Nome da empresa</label>
-                        <textarea class="field-text message" minlength="" name="name" placeholder="nome da empresa"
-                            required></textarea>
+                <label class="label" for="year">Ano de fundação/Tempo de mercado</label>
+                <input class="field" name="year" placeholder="O ano em que a empresa foi fundada"></input>
 
-                        <label class="label" for="message">Mensagem</label>
-                        <textarea class="field-text message" minlength="" name="message" placeholder="mensagem"
-                            required></textarea>
+                <button class="btn nav-btn" id="0">Próxima etapa →</button>
+            </div>
 
-                        <label class="label" for="history">Historia da empresa</label>
-                        <textarea class="field-text message" minlength="" name="history"
-                            placeholder="historia da empresa" required></textarea>
+            <div class="steps">
 
-                        <button id="enviar" class="btn-submit submit-briefing-js" type="submit">
-                            <h3>Enviar Formulário</h3>
-                        </button>
+                <label class="label" for="storytelling">História da marca</label>
+                <textarea class="field-text" name="storytelling"
+                    placeholder="Nos conte um pouco sobre a sua empresa, o que ela faz, a sua história, etc"></textarea>
 
-                    </form>
+                <label class="label" for="why-codelari">Por que a Codelari?</label>
+                <textarea class="field-text" name="why-codelari"
+                    placeholder="O que te levou a procurar a Codelari? No que podemos te ajudar?"></textarea>
+
+                <label class="label" for="has-site">A sua empresa já possui um site?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box2').checked = false"
+                        type="checkbox" name="has-site" id="box1" value="positive" data-field="site"></input>
+                    <span class="label-checkbox">Sim</span>
                 </div>
-            </div>
-        </section>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box1').checked = false"
+                        type="checkbox" name="has-site" id="box2" value="negative" data-field="site"></input>
+                    <span class=" label-checkbox">Não</span>
+                </div>
 
-        <section class="contact-landing">
-            <div class="container">
-                <p>
-                    E não se esqueça! Caso ainda tenha alguma dúvida, você pode nos chamar
-                    diretamente em nossas redes sociais.
-                </p>
-                <ul>
-                    <li>
-                        <a class="btn" href="https://www.facebook.com/CodelariAgencia" rel="noreferrer"
-                            target="_blank">Facebook</a>
-                    </li>
-                    <li>
-                        <a class="btn" href="https://www.instagram.com/codelariagencia" rel="noreferrer"
-                            target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a class="btn" href="https://twitter.com/CodelariAgencia" rel="noreferrer"
-                            target="_blank">Twitter</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                <label class="label handle-question" for="link" data-field="site">Link do site</label>
+                <input class="field handle-question" name="link" placeholder="Qual é o link do site?"
+                    data-field="site"></input>
 
-        <footer class="footer">
-            <img src="img/logo-min.svg" alt="Codelari" />
-            <p class="copy">
-                Codelari. CNPJ 41.361.913/0001-10 Todos os direitos reservados.
+                <label class="label handle-question" for="opinion" data-field="site">Opinião sobre o site atual</label>
+                <textarea class="field-text handle-question" name="opinion"
+                    placeholder="O que você gostaria de mudar/acrescentar?" data-field="site"></textarea>
+
+                <label class="label" for="expectations">Qual necessidade o novo site precisa atender?</label>
+                <textarea class="field-text" name="expectations"
+                    placeholder="Quais são as suas expectativas para o novo site e qual seria o objetivo dele?"></textarea>
+
+                <nav>
+                    <button class="btn nav-btn" id="1">← Voltar etapa</button>
+                    <button class="btn nav-btn" id="1">Próxima etapa →</button>
+                </nav>
+
+            </div>
+
+            <div class="steps">
+                <label class="label" for="target">Público-alvo da marca</label>
+                <textarea class="field-text" name="target"
+                    placeholder="Qual você acredita ser o tipo de público da sua marca?"></textarea>
+
+                <label class="label" for="products">Produtos que são/serão comercializados</label>
+                <textarea class="field-text" name="products"
+                    placeholder="Quais os tipos de produtos que você gostaria de vender no e-commerce?"></textarea>
+
+                <label class="label" for="has-categories">Você já tem em mente quais as categorias de produtos que
+                    gostaria de disponibilizar no site?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box4').checked = false"
+                        type="checkbox" name="has-categories" id="box3" value="positive"
+                        data-field="categories"></input>
+                    <span class="label-checkbox">Sim</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box3').checked = false"
+                        type="checkbox" name="has-categories" id="box4" value="negative"
+                        data-field="categories"></input>
+                    <span class="label-checkbox">Não</span>
+                </div>
+
+                <label class="label handle-question" for="categories" data-field="categories">Quais são elas? Liste
+                    abaixo:</label>
+                <textarea class="field-text handle-question" name="categories"
+                    placeholder="Indique aqui as categorias de produtos que pretende comercializar"
+                    data-field="categories"></textarea>
+
+                <label class="label" for="has-familiarity">Os visitantes do site já estão familiarizados com o tipo de
+                    produto que você comercializa ou precisam ser apresentados?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box6').checked = false"
+                        type="checkbox" name="has-familiarity" id="box5" value="positive"
+                        data-field="has-familiarity"></input>
+                    <span class="label-checkbox">Já estão familiarizados</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box5').checked = false"
+                        type="checkbox" name="has-familiarity" id="box6" value="negative"
+                        data-field="has-familiarity"></input>
+                    <span class="label-checkbox">Será necessário uma apresentação</span>
+                </div>
+
+                <label class="label" for="has-mission">A empresa já possui missão, visão e valores definidos?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box8').checked = false"
+                        type="checkbox" name="has-mission" id="box7" value="positive" data-field="mission"></input>
+                    <span class="label-checkbox">Sim</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box7').checked = false"
+                        type="checkbox" name="has-mission" id="box8" value="negative" data-field="mission"></input>
+                    <span class="label-checkbox">Não</span>
+                </div>
+
+                <label class="label handle-question" for="mission" data-field="mission">Quais seriam?</label>
+                <textarea class="field-text handle-question" name="mission"
+                    placeholder="Quais são esses valores? O que a sua empresa preza, e o que espera alcançar com ela?"
+                    data-field="mission"></textarea>
+
+                <label class="label" for="has-positioning">A sua marca já possui um tom de voz/posicionamento
+                    definido?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box10').checked = false"
+                        type="checkbox" name="has-positioning" id="box9" value="positive"
+                        data-field="positioning"></input>
+                    <span class="label-checkbox">Sim</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box9').checked = false"
+                        type="checkbox" name="has-positioning" id="box10" value="negative"
+                        data-field="positioning"></input>
+                    <span class="label-checkbox">Não</span>
+                </div>
+
+                <label class="label handle-question" for="positioning" data-field="positioning">Qual seria?</label>
+                <textarea class="field-text handle-question" name="positioning"
+                    placeholder="Nos conte um pouco sobre a sua estratégia de comunicação"
+                    data-field="positioning"></textarea>
+
+                <nav>
+                    <button class="btn nav-btn" id="2">← Voltar etapa</button>
+                    <button class="btn nav-btn" id="2">Próxima etapa →</button>
+                </nav>
+            </div>
+
+            <div class="steps design">
+                <label class=" label" for="logo">Logotipo da marca</label>
+                <p class="question-text">Faça o upload do logo utilizando o botão abaixo. Somente estão permitidos
+                    arquivos
+                    de imagens.</p>
+                <input class="field-img" name="logo" type='file'
+                    accept="image/png, image/gif, image/jpeg, image/svg+xml" onchange='openFile(event)'></input>
+
+                <div id="preview-image" class="preview-image" style="display: none">
+                    <img class="image" id="image" frameBorder=0;></img>
+                </div>
+
+                <label class="label" for="colors">Cores da marca</label>
+                <p class="question-text">Escolha abaixo as três principais cores que fazem parte da sua identidade
+                    visual ou
+                    que devem ser predominantes no site.</p>
+                <input style="display: none !important;" class="colors" name="colors" type="text" value="">
+                <div class="field-flex fix-margin">
+                    <input class="field-color" type='color'></input>
+                    <input class="field-color" type='color'></input>
+                    <input class="field-color" type='color'></input>
+                </div>
+
+                <label class="label" for="has-fonts">A sua marca já possui famílias de fontes definidas?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box12').checked = false"
+                        type="checkbox" name="has-fonts" id="box11" value="positive" data-field="fonts"></input>
+                    <span class="label-checkbox">Sim</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box11').checked = false"
+                        type="checkbox" name="has-fonts" id="box12" value="negative" data-field="fonts"></input>
+                    <span class="label-checkbox">Não</span>
+                </div>
+
+                <label class="label handle-question" for="fonts" data-field="fonts">Quais são? Liste abaixo:</label>
+                <textarea class="field-text handle-question" name="fonts"
+                    placeholder="Caso não se lembre ou não saiba o nome das fontes, pode deixar também um link para referência!"
+                    data-field="fonts"></textarea>
+
+                <label class="label" for="manual">Manual da marca (caso a empresa tenha)</label>
+                <input class="field" name="manual" placeholder="Link do arquivo ou pasta do Google Drive"></input>
+
+                <nav>
+                    <button class="btn nav-btn" id="3">← Voltar etapa</button>
+                    <button class="btn nav-btn" id="3">Próxima etapa →</button>
+                </nav>
+            </div>
+
+            <div class="steps">
+                <label class="label" for="divide">Você já pensou em uma possível divisão do conteúdo do site? Como
+                    seria?</label>
+                <textarea class="field-text" name="divide"
+                    placeholder="Além da página de loja, quais outras páginas você acredita ser essencial?"></textarea>
+
+                <label class="label" for="has-function">O site vai precisar de alguma funcionalidade específica?</label>
+                <div class="field-flex yes">
+                    <input class="field-checkbox" onclick="document.querySelector('#box14').checked = false"
+                        type="checkbox" name="has-function" id="box13" value="positive" data-field="function"></input>
+                    <span class="label-checkbox">Sim</span>
+                </div>
+                <div class="field-flex no">
+                    <input class="field-checkbox" onclick="document.querySelector('#box13').checked = false"
+                        type="checkbox" name="has-function" id="box14" value="negative" data-field="function"></input>
+                    <span class="label-checkbox">Não</span>
+                </div>
+
+                <label class="label handle-question" for="function" data-field="function">Qual seria?</label>
+                <textarea class="field-text handle-question" name="function"
+                    placeholder="Fique à vontade para expressar aqui as suas ideias ou funcionalidades que gostaria que tivesse"
+                    data-field="function"></textarea>
+
+                <label class="label" for="changes">O você gostaria de ter a liberdade de sempre poder alterar no
+                    site?</label>
+                <textarea class="field-text" name="changes"
+                    placeholder="Além dos produtos, o que deve ser alterado recorrentemente?"></textarea>
+
+                <label class="label" for="media">Quais os meios de contato você gostaria que fossem disponibilizados
+                    aos visitantes?</label>
+                <textarea class="field-text" name="media"
+                    placeholder="Liste as redes sociais da sua empresa com os seus respectivos links"></textarea>
+
+                <label class="label" for="references">Quais sites você gosta ou costuma fazer suas compras
+                    online?</label>
+                <textarea class="field-text" name="references"
+                    placeholder="Cole aqui links de boas referências para o seu negócio"></textarea>
+
+
+                <nav class="nav-submit">
+                    <button class="btn nav-btn" id="4">← Voltar etapa</button>
+                    <button class="submit-briefing-js" id="enviar" type="submit">Enviar
+                        briefing</button>
+                </nav>
+            </div>
+
+            <p class="briefing-instructions active-instruction">Olá, bem vindo ao briefing da Codelari!
+                <br><br>
+                Se você está aqui, é porque você já é especial para nós, ficamos muito agradecidos pelo seu voto de
+                confiança. A nossa
+                agência ainda está engatinhando, mas temos muita disposição para mostrarmos do que somos capazes.
+                <br><br>
+                Eu irei te guiar por aqui, então já fique atento a algumas coisinhas:
+                <br><br>
+                Evite recarregar a página, isso irá prejudicar a sua experiência durante o processo de preenchimento do
+                briefing.
+                <br><br>
+                Caso tenha ficado com dúvida em alguma questão, pode deixar em branco e depois nos perguntar do que se
+                trata diretamente
+                com a gente. Para isso, basta nos enviar um e-mail: <a class='link'
+                    href='mailto:contato@codelari.com'><strong>contato@codelari.com</strong></a>
             </p>
-            <p class="tagline">!n dev we trust.</p>
-        </footer>
-        <script src="js/script-briefing.js"></script>
+
+            <p class="briefing-instructions">A Codelari é uma agência que vende soluções, ou seja, se o que você precisa
+                para o seu negócio crescer, é de um comércio
+                eletrônico, então veio ao lugar certo.
+                <br><br>
+                Mas para melhor atendê-lo, primeiro precisamos conhecer um pouco sobre a sua marca, e também qual a sua
+                expectativa
+                sobre o nosso trabalho. Assim, conseguimos identificar o que deve ser solucionado e entregar aquilo que
+                você espera (ou
+                até mais).
+            </p>
+
+            <p class="briefing-instructions">Marketing: você já deve tá cansado de ouvir essa palavra, porém, se a sua
+                empresa tem um plano e uma estratégia bem
+                definidas, as chances do seu empreendimento dar certo são muito maiores.
+                <br><br>
+                Conte agora para a gente o que você tem de informações quanto a isso, e quanto mais, melhor! É aqui onde
+                iremos saber
+                exatamente onde alinhar a sua marca ao tipo de e-commerce que combina mais com o seu negócio.
+            </p>
+
+            <p class="briefing-instructions">Como um dos benefícios de fazer o seu comércio eletrônico pela Codelari é
+                justamente o layout exclusivo, feito especialmente para você, é essencial a gente conhecer os detalhes
+                referentes ao design da sua marca.
+                <br><br>
+                O logo, a paleta de cores, tudo será preservado. Mas caso a sua empresa ainda esteja no início e não
+                possua uma identidade visual, tente chegar o mais perto possível do que você gostaria que fosse.
+                <br><br>
+                Por exemplo, se a sua marca não tem um logo, seria muito importante termos pelo menos a foto de um
+                rascunho ou algo do tipo.
+            </p>
+
+            <p class="briefing-instructions">"Meu deus, e esse formulário que não acaba nunca?"
+                <br><br>
+                Calma lá, agora é a parte mais interessante! Vamos falar sobre o site em si, quais são as suas ideias,
+                as suas
+                referências, etc.
+                <br><br>
+                Lembre-se que é muito importante a sua participação durante esse processo, ou seja, não economize nas
+                palavras. Todos os
+                detalhes que você nos der aqui, serão muito valiosos para entregar um trabalho completo.
+                <br><br>
+                Além disso, como esta é a última etapa, volte para as outras páginas utilizando os botões de navegação
+                no final do
+                formulário para revisar todas as suas respostas e ter certeza de que não está faltando nada.
+                <br><br>
+                Se estiver pronto(a), pode clicar em "Enviar Briefing". Até mais!
+            </p>
+
+            <div style="display: none;" id="form-erro">
+                <h2 class="title">Houve algum erro muito sinistro aqui :(</h2>
+                <p>Bom, ainda não sabemos o que pode ter acontecido, mas gostaríamos que você nos informasse pelo nosso
+                    e-mail: <a class='link'
+                        href='mailto:contato@codelari.com'><strong>contato@codelari.com</strong></a>.</p>
+                <p id="form-note">Assim poderemos solucionar esse problema o mais rápido possível, para que assim você
+                    consiga preencher o briefing e dar continuidade nesse sonho de ter um comércio eletrônico todinho só
+                    para você.<br><br>Aguardamos o seu contato!</p>
+            </div>
+
+            <div style="display: none;" id="form-sucesso">
+                <h2 class="title">O briefing foi enviado com sucesso :)</h2>
+                <p>Você está a um passo de ter o seu próprio empreendimento digital! Não é demais?</p>
+                <p id="form-note">Agora estes são os próximos passos: Iremos analisar o briefing, e em instantes
+                    mandaremos um e-mail para você com a
+                    nossa proposta e o contrato a ser assinado.<br><br>Então fique atento com a sua caixa de entrada e
+                    spam! Logo logo retornaremos o seu contato.</p>
+            </div>
+
+            <script src="js/script-briefing.js"></script>
+        </form>
+    </section>
 </body>
 
 </html>

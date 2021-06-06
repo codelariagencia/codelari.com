@@ -1,0 +1,217 @@
+a,
+address,
+article,
+aside,
+audio,
+blockquote,
+body,
+canvas,
+caption,
+cite,
+code,
+dd,
+details,
+div,
+dl,
+dt,
+fieldset,
+footer,
+form,
+h1,
+h2,
+h3,
+header,
+html,
+iframe,
+img,
+label,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+small,
+span,
+strong,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr,
+ul,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: "Big Caslon";
+  src: url(../fonts/big-caslon-medium.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Code Pro Medium";
+  src: url(../fonts/source-code-pro-medium.ttf);
+  font-display: swap;
+}
+:root {
+  --colorPrimary: #221c35;
+  --colorSecundary: #ef6a00;
+  --colorTertiary: #007672;
+  --gray: #f2f2f2;
+  --red: #ea3732;
+  --textFontMedium: "Source Code Pro Medium", monospace;
+  --titleFont: "Big Caslon", serif;
+  --size12: 0.75rem;
+  --size16: 1rem;
+  --size18: 1.125rem;
+  --size36: 2.25rem;
+  --size72: 4.5rem;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+::selection {
+  background: var(--colorTertiary);
+  color: var(--gray);
+  text-shadow: none;
+}
+body {
+  background: var(--gray);
+  font-size: 1rem;
+  font-family: var(--textFontMedium);
+}
+.container {
+  max-width: 1077px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+}
+.title {
+  font-size: var(--size72);
+  font-family: var(--titleFont);
+  max-width: 100%;
+}
+.not-found-body {
+  background: var(--colorPrimary);
+}
+.not-found-body .container {
+  flex-direction: column;
+}
+.not-found-body .title {
+  color: var(--colorSecundary);
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+}
+.morpheus {
+  margin-top: 30px;
+  background: url(../img/morpheus.jpeg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+}
+.text-error {
+  color: var(--gray);
+  font-size: var(--size18);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.red-pill {
+  float: left;
+  display: block;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.red-pill:hover {
+  background: rgba(234, 55, 50, 0.1);
+  opacity: 1;
+}
+.blue-pill {
+  float: right;
+  display: block;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.blue-pill:hover {
+  background: rgba(0, 118, 114, 0.1);
+  opacity: 1;
+}
+.say-morpheus {
+  color: var(--gray);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+}
+@media (max-width: 650px) {
+  .morpheus {
+    background-size: 100%;
+    display: flex;
+    height: 350px;
+  }
+  .blue-pill,
+  .red-pill {
+    float: none;
+    opacity: 1;
+  }
+  .blue-pill:hover,
+  .red-pill:hover {
+    background: 0 0;
+  }
+  .say-morpheus {
+    font-size: var(--size12);
+    padding: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .title {
+    font-size: var(--size36);
+  }
+}

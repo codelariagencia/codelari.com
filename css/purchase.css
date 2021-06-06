@@ -80,10 +80,12 @@ select:-webkit-autofill:focus {
   border: none;
 }
 
-.btn-submit:hover {
-  color: var(--colorPrimary);
-  background: var(--colorSecundary);
-  border: 4px solid var(--colorPrimary);
+.btn-submit:hover,
+.submit-briefing-js:hover,
+.click-on-submit {
+  color: var(--colorPrimary) !important;
+  background: var(--colorSecundary) !important;
+  border: 4px solid var(--colorPrimary) !important;
 }
 
 .purchase-right {
