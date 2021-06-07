@@ -64,7 +64,7 @@
 
 .contact-landing {
   background: var(--colorPrimary);
-  padding: 120px 0px;
+  padding: 120px 0px 140px 0;
   color: var(--gray);
 }
 
