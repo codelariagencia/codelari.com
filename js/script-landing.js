@@ -1,14 +1,14 @@
 // Header
 
-let words = document.querySelectorAll(".slide-title");
-let titleLanding = document.querySelectorAll(".original-words");
-let titleLandingChanged = document.querySelectorAll(".change-words");
-let bgWord = document.querySelector(".bg-word");
-let currentWord = 0;
-let max = words.length;
+let words = document.querySelectorAll(".slide-title"),
+  titleLanding = document.querySelectorAll(".original-words"),
+  titleLandingChanged = document.querySelectorAll(".change-words"),
+  bgWord = document.querySelector(".bg-word"),
+  currentWord = 0,
+  max = words.length;
 
-const form = document.querySelector(".contact-form-js");
-const formButton = form.querySelector(".submit-form-js");
+const form = document.querySelector(".contact-form-js"),
+  formButton = form.querySelector(".submit-form-js");
 
 setInterval(() => {
   words[currentWord].classList.remove("active-word");
@@ -47,10 +47,10 @@ setInterval(() => {
 
 // Stages & Purchase
 
-const stages = document.querySelectorAll(".stage");
-const price = document.querySelector(".purchase-right");
-const toTop = window.innerHeight * 0.9;
-const toTopPrice = window.innerHeight * 0.7;
+const stages = document.querySelectorAll(".stage"),
+  price = document.querySelector(".purchase-right"),
+  toTop = window.innerHeight * 0.9,
+  toTopPrice = window.innerHeight * 0.7;
 
 function showItensLanding() {
   stages.forEach(function (item) {
@@ -69,8 +69,8 @@ window.addEventListener("scroll", showItensLanding);
 
 // Call To Action
 
-const btnCta = document.querySelector(".call-to-action");
-const purchase = document.querySelector("#purchase");
+const btnCta = document.querySelector(".call-to-action"),
+  purchase = document.querySelector("#purchase");
 
 function showPurchase(event) {
   event.preventDefault();
@@ -128,8 +128,8 @@ function formatName() {
 
 // Form
 
-const emailForm = document.querySelector(".email");
-const messageForm = document.querySelector(".message");
+const emailForm = document.querySelector(".email"),
+  messageForm = document.querySelector(".message");
 
 window.SimpleForm = class {
   constructor(t) {

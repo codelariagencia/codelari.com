@@ -238,7 +238,7 @@
   width: calc(100% - 79px);
 }
 
-.feedback-briefing {
+.hidden-content {
   display: none !important;
 }
 

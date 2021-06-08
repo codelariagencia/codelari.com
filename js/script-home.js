@@ -1,13 +1,12 @@
 // FAQ
 
-const questions = document.querySelectorAll('[data-faq="questions"] li');
-const answers = document.querySelectorAll('[data-faq="answers"]');
-const line = document.querySelectorAll('[data-faq="line"]');
-const icon = document.querySelectorAll(".icon");
-const answersMobile = document.querySelectorAll(".answers-mobile");
-const arrows = document.querySelectorAll(".arrow-mobile");
-
-const audio = new Audio("../img/beep.mp3");
+const questions = document.querySelectorAll('[data-faq="questions"] li'),
+  answers = document.querySelectorAll('[data-faq="answers"]'),
+  line = document.querySelectorAll('[data-faq="line"]'),
+  icon = document.querySelectorAll(".icon"),
+  answersMobile = document.querySelectorAll(".answers-mobile"),
+  arrows = document.querySelectorAll(".arrow-mobile"),
+  audio = new Audio("../img/beep.mp3");
 audio.volume = 0.05;
 
 questions.forEach(function (question, questionId) {
@@ -41,9 +40,9 @@ questions.forEach(function (question, questionId) {
 
 // Data
 
-const dataInfos = document.querySelectorAll(".data-right p");
-const toTop = window.innerHeight * 0.9;
-const numbers = document.querySelectorAll("[data-numbers]");
+const dataInfos = document.querySelectorAll(".data-right p"),
+  toTop = window.innerHeight * 0.9,
+  numbers = document.querySelectorAll("[data-numbers]");
 
 function animaNumber(numberId, dataInfo, incrementValue = 100) {
   if (!dataInfo.classList.contains("animated-number")) {
@@ -96,8 +95,8 @@ dataId.forEach(function (id) {
   animaScroll(id);
 });
 
-const img = document.querySelector(".data-left img");
-const toTopImg = window.innerHeight * 0.8;
+const img = document.querySelector(".data-left img"),
+  toTopImg = window.innerHeight * 0.8;
 
 function animaScrollImg() {
   const viewTop = img.getBoundingClientRect().top - toTopImg;
@@ -110,8 +109,8 @@ window.addEventListener("scroll", animaScrollImg);
 
 // Service
 
-const benefits = document.querySelectorAll(".benefit");
-const tooltips = document.querySelectorAll(".tooltip");
+const benefits = document.querySelectorAll(".benefit"),
+  tooltips = document.querySelectorAll(".tooltip");
 
 benefits.forEach(function (benefit) {
   benefit.addEventListener("mouseover", showTooltip);
@@ -126,9 +125,9 @@ benefits.forEach(function (benefit) {
 
 // Contact
 
-const contact = document.querySelector(".contact");
-const toTopContact = window.innerHeight * 0.7;
-const animateLion = document.querySelectorAll("[data-lion]");
+const contact = document.querySelector(".contact"),
+  toTopContact = window.innerHeight * 0.7,
+  animateLion = document.querySelectorAll("[data-lion]");
 
 function animaScrollLion() {
   const viewTop = contact.getBoundingClientRect().top - toTopContact;

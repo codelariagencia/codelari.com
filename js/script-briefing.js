@@ -1,10 +1,9 @@
-const form = document.querySelector(".briefing-form-js");
-const submitBriefingButton = document.querySelector(".submit-briefing-js");
-const steps = document.querySelectorAll(".steps");
-const instructions = document.querySelectorAll(".briefing-instructions");
-const navBtn = document.querySelectorAll(".nav-btn");
-
-const fields = [...form.querySelectorAll("label")];
+const form = document.querySelector(".briefing-form-js"),
+  submitBriefingButton = document.querySelector(".submit-briefing-js"),
+  steps = document.querySelectorAll(".steps"),
+  instructions = document.querySelectorAll(".briefing-instructions"),
+  navBtn = document.querySelectorAll(".nav-btn"),
+  fields = [...form.querySelectorAll("label")];
 
 var openFile = function (event) {
   var input = event.target;
@@ -29,8 +28,8 @@ const sendForm = async () => {
   btnSubmit.disabled = true;
   navBtn[7].disabled = true;
 
-  const enterprise = form.querySelector(`[name=enterprise]`).value;
-  const body = getBody();
+  const enterprise = form.querySelector(`[name=enterprise]`).value,
+    body = getBody();
 
   formData.append("name", enterprise);
   formData.append("body", body);
@@ -41,25 +40,24 @@ const sendForm = async () => {
     mode: "no-cors",
   });
 
-  if (!response.ok) {
+  function hiddenContent() {
     steps.forEach(function (step) {
-      step.classList.add("feedback-briefing");
+      step.classList.add("hidden-content");
     });
     instructions.forEach(function (instruction) {
-      instruction.classList.add("feedback-briefing");
+      instruction.classList.add("hidden-content");
     });
+  }
+
+  if (!response.ok) {
+    hiddenContent();
     const feedbackError = document.querySelector(".briefing-form #form-erro");
     feedbackError.classList.add("show-feedback");
   }
 
   const result = await response.json();
   if (result.isSuccess) {
-    steps.forEach(function (step) {
-      step.classList.add("feedback-briefing");
-    });
-    instructions.forEach(function (instruction) {
-      instruction.classList.add("feedback-briefing");
-    });
+    hiddenContent();
     const feedbackSucess = document.querySelector(
       ".briefing-form #form-sucesso"
     );
@@ -91,10 +89,10 @@ const getBody = () => {
       if (labelName === labels) {
         text = "";
         const verifyCheckbox = document.querySelectorAll(".field-checkbox");
-        verifyCheckbox.forEach(function (item) {
-          if (item.checked) {
-            if (item.getAttribute("name") === labels) {
-              text = item.nextElementSibling.innerText;
+        verifyCheckbox.forEach(function (box) {
+          if (box.checked) {
+            if (box.getAttribute("name") === labels) {
+              text = box.nextElementSibling.innerText;
             }
           }
         });
@@ -119,9 +117,9 @@ navBtn.forEach(function (btn) {
   btn.addEventListener("click", nav);
 });
 
-const nameForm = form.querySelector(`[name=name]`);
-const emailForm = form.querySelector(`[name=email]`);
-const enterpriseForm = form.querySelector(`[name=enterprise]`);
+const nameForm = form.querySelector(`[name=name]`),
+  emailForm = form.querySelector(`[name=email]`),
+  enterpriseForm = form.querySelector(`[name=enterprise]`);
 
 function nav(event) {
   const btnId = +event.target.id;
@@ -160,8 +158,8 @@ const deactivateStep = (stepId) => {
 
 // Checkbox
 
-const checkbox = document.querySelectorAll(".field-checkbox");
-const questions = document.querySelectorAll(".handle-question");
+const checkbox = document.querySelectorAll(".field-checkbox"),
+  questions = document.querySelectorAll(".handle-question");
 
 checkbox.forEach(function (box) {
   box.addEventListener("change", showQuestion);
@@ -184,8 +182,8 @@ function showQuestion(event) {
 
 // Colors
 
-const fieldColors = document.querySelectorAll(".field-color");
-const colors = document.querySelector(".colors");
+const fieldColors = document.querySelectorAll(".field-color"),
+  colors = document.querySelector(".colors");
 
 fieldColors.forEach(function (field) {
   field.addEventListener("change", returnValue);
